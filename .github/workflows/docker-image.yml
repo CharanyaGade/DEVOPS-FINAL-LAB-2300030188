@@ -26,7 +26,7 @@ jobs:
       - name: Build and push backend image
         uses: docker/build-push-action@v5
         with:
-          context: ./DEVOPS-EXAM/DEVOPS-FINAL-PROJECT-105/springbootproject
+          context: ./DEVOPS-FINAL-PROJECT-105/springbootproject
           file: ./DEVOPS-FINAL-PROJECT-105/springbootproject/backend.Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/230030188-final-backend:latest
@@ -34,7 +34,7 @@ jobs:
       - name: Build and push frontend image
         uses: docker/build-push-action@v5
         with:
-          context: ./DEVOPS-EXAM/DEVOPS-FINAL-PROJECT-105/reactapp
+          context: ./DEVOPS-FINAL-PROJECT-105/reactapp
           file: ./DEVOPS-FINAL-PROJECT-105/reactapp/frontend.Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/2300030188-final-frontend:latest
